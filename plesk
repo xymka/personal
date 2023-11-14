@@ -1,0 +1,9 @@
+#!/bin/bash
+
+case "$3" in
+  "-e")
+    cd /etc/nginx/modules.conf.d
+	ln -s ..\/modules.available.d\/botguard.load botguard.conf;;
+  "-d")
+    rm /etc/nginx/modules.conf.d/botguard.conf;;
+esac
